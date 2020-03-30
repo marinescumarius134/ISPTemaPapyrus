@@ -166,7 +166,7 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ieiBYHKOEeqLTOJuJzOoUA" name="pretTotal" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_xB22AHKQEeqLTOJuJzOoUA" name="nrComanda">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xB22AHKQEeqLTOJuJzOoUA" name="nrComanda" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_XJjKUHKHEeqLTOJuJzOoUA" name="setNrKmParcursi"/>
@@ -189,7 +189,7 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_cLckoHKMEeqLTOJuJzOoUA" name="getParola"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_RT8hgHKKEeqLTOJuJzOoUA" name="Administrator">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_9EskgHKKEeqLTOJuJzOoUA" name="BazaDeDate"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9EskgHKKEeqLTOJuJzOoUA" name="BazaDeDate" visibility="private"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="__fH_kHKKEeqLTOJuJzOoUA" name="StergeClient"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_A_bUsHKLEeqLTOJuJzOoUA" name="StergeSofer"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_HpupgHKLEeqLTOJuJzOoUA" name="AdaugaSofer"/>
