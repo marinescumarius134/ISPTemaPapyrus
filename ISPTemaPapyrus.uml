@@ -7,7 +7,7 @@
     <group xmi:type="uml:ActivityPartition" xmi:id="_1kWOwHJZEeqS0_Pt5NnDSw" name="ActivityPartition1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_DbQFcHJgEeqS0_Pt5NnDSw" name="RideSharing">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_YIvBIHJgEeqS0_Pt5NnDSw" name="Login">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_YIvBIHJgEeqS0_Pt5NnDSw" name="Login/Logout">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_-vWsIHJhEeqS0_Pt5NnDSw" name="ExtensionPoint2"/>
       <include xmi:type="uml:Include" xmi:id="_3bEmMHJhEeqS0_Pt5NnDSw" addition="_0rh2wHJhEeqS0_Pt5NnDSw"/>
     </packagedElement>
@@ -108,6 +108,13 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Tzz5YHKOEeqLTOJuJzOoUA" name="sold" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yrkhcndUEeqgNOAV0PBROw" name="verificare" type="_eAO60HdUEeqgNOAV0PBROw" association="_yrj6YHdUEeqgNOAV0PBROw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yrkhc3dUEeqgNOAV0PBROw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yrlIgHdUEeqgNOAV0PBROw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FQhqYHdVEeqgNOAV0PBROw" name="verificat" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_TDl9YHKOEeqLTOJuJzOoUA" name="getSold"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_esvKwHKOEeqLTOJuJzOoUA" name="setSold" concurrency="concurrent">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_3tG38HKOEeqLTOJuJzOoUA" name="sold">
@@ -116,6 +123,8 @@
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_OBI6sHKPEeqLTOJuJzOoUA" name="trimiteCodConfirmare"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_WTnuQHKPEeqLTOJuJzOoUA" name="introduceCodConfirmare"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IepzQHdVEeqgNOAV0PBROw" name="getVerificat"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KqAQgHdVEeqgNOAV0PBROw" name="setVerificat"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_k2J5sHKGEeqLTOJuJzOoUA" name="Sofer">
     <generalization xmi:type="uml:Generalization" xmi:id="_Ex4kkHKJEeqLTOJuJzOoUA" general="_bqBPYHKIEeqLTOJuJzOoUA"/>
@@ -135,6 +144,8 @@
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_N_JBgHKNEeqLTOJuJzOoUA" name="disponibilitate" visibility="private" type="_RUS_cHKNEeqLTOJuJzOoUA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ven5wHdTEeqgNOAV0PBROw" name="rating" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-x2MMHdTEeqgNOAV0PBROw" name="nrComenzi" visibility="private"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_0wQhwHKNEeqLTOJuJzOoUA" name="getMasina"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1srGsHKNEeqLTOJuJzOoUA" name="setMasina"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_VB5yQHKQEeqLTOJuJzOoUA" name="preluareComanda">
@@ -142,6 +153,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_B0gr8HdUEeqgNOAV0PBROw" name="getRating"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_DJdssHdUEeqgNOAV0PBROw" name="setRating"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_-gd7wHKGEeqLTOJuJzOoUA" name="Comanda">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_FRMBoHKHEeqLTOJuJzOoUA" name="adresaPlecare" visibility="private">
@@ -175,6 +188,16 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_iXXbsHKJEeqLTOJuJzOoUA" name="setKmParcursi"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_mLhQgHKOEeqLTOJuJzOoUA" name="setPretTotal"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ZEawAHKREeqLTOJuJzOoUA" name="setStareComanda"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TIrCwHdREeqgNOAV0PBROw" name="setClient">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_fiI50HdREeqgNOAV0PBROw" name="client_" type="_KnfCoHJgEeqS0_Pt5NnDSw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_myx14HdREeqgNOAV0PBROw" name="getNrKmParcursi" concurrency="concurrent"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nGSAsHdREeqgNOAV0PBROw" name="getAdresaPlecare"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nbKrkHdREeqgNOAV0PBROw" name="getKmParcursi"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nqoD4HdREeqgNOAV0PBROw" name="getPretTotal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n4s8IHdREeqgNOAV0PBROw" name="getStareComanda"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o58WsHdREeqgNOAV0PBROw" name="getClient"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pUzGsHdREeqgNOAV0PBROw" name="getDestinatie"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_bqBPYHKIEeqLTOJuJzOoUA" name="Persoana">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_2YYIYHKIEeqLTOJuJzOoUA" name="getNume"/>
@@ -230,6 +253,20 @@
   <packagedElement xmi:type="uml:Enumeration" xmi:id="_RUS_cHKNEeqLTOJuJzOoUA" name="StariSofer">
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ScSiQHKNEeqLTOJuJzOoUA" name="Disponibil"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Tx0KwHKNEeqLTOJuJzOoUA" name="Indisponibil"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eAO60HdUEeqgNOAV0PBROw" name="Verificare">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_g0P6kHdUEeqgNOAV0PBROw" name="cod" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iD3IUHdUEeqgNOAV0PBROw" name="client" visibility="private" type="_KnfCoHJgEeqS0_Pt5NnDSw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_otDp4HdUEeqgNOAV0PBROw" name="trimiteCod"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_q3Ji4HdUEeqgNOAV0PBROw" name="primesteRaspuns"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yrj6YHdUEeqgNOAV0PBROw" memberEnd="_yrkhcndUEeqgNOAV0PBROw _yrlIgXdUEeqgNOAV0PBROw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yrkhcHdUEeqgNOAV0PBROw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yrkhcXdUEeqgNOAV0PBROw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yrlIgXdUEeqgNOAV0PBROw" name="client" type="_j4JZUHKGEeqLTOJuJzOoUA" association="_yrj6YHdUEeqgNOAV0PBROw"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lA1bgHKNEeqLTOJuJzOoUA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lA5F4HKNEeqLTOJuJzOoUA" source="http://www.eclipse.org/uml2/2.0.0/UML">
